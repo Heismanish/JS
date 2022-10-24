@@ -1,2 +1,2 @@
 # JS
-An repo to dicument my JavaScript journey.
+A repo to document my JavaScript journey.
