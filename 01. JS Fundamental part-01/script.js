@@ -164,3 +164,124 @@ lines`);
 //     century = 21;
 // }
 // console.log(century)
+
+// Type Conversion and Type Coercion:
+/*
+// Type Conversion: When we manually convert from one type to other.
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);// Number is a functon to convert string to number.
+console.log(Number(inputYear)+18); 
+
+console.log(Number('Manish')); // Gives NaN as it is not a valid number
+console.log(typeof NaN); // 'NaN' is an invalid number
+
+console.log(String(23), 23); //String function is used to convert to String.
+
+// Type Coercion: when type conversion is done automatically w/o us knowing.
+console.log("I'm a "+ 20 +' years old.'); // in JS '+' sign triggers type coercion, and anything added with a string will be converted to string.
+console.log("I'm a "+ false +' believer');
+console.log( '10'+ 20 +'3');
+
+console.log('10'- 20 -'3'); // '-' sign triggers just the opposite, that is, converts to number.
+
+// here strings are converted to numbers.
+console.log('23'*'2');
+console.log('40'/'3');
+
+// let's practice
+let n = '1'+1; // '11'
+n = n-1; // 11 - 1 = 10
+console.log(n);
+*/
+
+/*
+// Falsy value: A value that will be converted to false by type conversion/coercion.
+// 5 falsy values : 0, '', undefined, null, NaN 
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+const money = 0;
+// here money = 0, and 0 is a falsy value so it will be converted to false here.
+if(money){ 
+    console.log("Don't spend it all ;) ");
+} else{
+    console.log('You should get a job!'); // this will be executed
+}
+
+
+let height;
+// here height is undefined, which is a falsy value.
+if(height){
+    console.log('Yay!! Height is defined')
+}else{
+    console.log('Height is not defined');// hence this block is executed
+} 
+
+
+// Here even though Height2 holds a valid value, false block will be executed which is a bug here.
+let height2 = 0;
+// here height is 0, which is a falsy value.
+if(height2){
+    console.log('Yay!! Height is defined')
+}else{
+    console.log('Height is not defined');// hence this block is executed
+} 
+*/
+
+// Equality Operators:  == VS ===
+/*
+const age = 18;
+// "===" is a 'strict equality operator' 
+// It doesn't perform type coercion while comparing.
+if (age === 18) console.log('You just became an adult :D (strict)');
+
+// Always try to use "===" for comparison always.
+
+// "==" is 'loose equality operator'
+// It does perform type coercion while comparing.
+if (age == '18') console.log('You just became an adult :D (loose)');
+
+const favNum = Number(prompt("What's your favourite number?:"));
+console.log(favNum); 
+console.log(typeof(favNum)); // here the input is stored in from of a string
+
+if(favNum === 23){
+    console.log('Cool! 23 is an amazing number!');
+} else if(favNum === 7){
+    console.log('7 is also a cool number!');
+} else {
+    console.log('Number is not 23 or 7');
+}
+
+if (favNum !== 23) console.log('why not 23?');
+*/
+
+// BASIC BOOLEAN LOGIC: AND, OR & NOT
+/*
+const hasDriversLicence = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicence && hasGoodVision);
+console.log(hasDriversLicence || hasGoodVision);
+console.log(!hasDriversLicence && hasGoodVision);
+console.log(!hasDriversLicence);
+
+
+// if (hasDriversLicence && hasGoodVision){
+//     console.log('Sarah is able to drive!');
+// } else {
+//     console.log('Someone else should drive...');
+// }
+
+const isTired = true; // C
+console.log(hasDriversLicence || hasGoodVision || isTired);
+
+if (hasDriversLicence && hasGoodVision && !isTired){
+    console.log('Sarah is able to drive!');
+} else {
+    console.log('Someone else should drive...');
+}
+*/
