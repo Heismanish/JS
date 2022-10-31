@@ -285,3 +285,84 @@ if (hasDriversLicence && hasGoodVision && !isTired){
     console.log('Someone else should drive...');
 }
 */
+
+// Switch Statements
+/*
+const day = 'wednesday';
+
+switch(day){
+    case 'monday': // day === 'monday'
+        console.log('Plan my Course');
+        console.log('Go to college');
+        break;
+    case 'tuesday':
+        console.log('Prepare for test');
+        break;
+    case 'wednesday':
+    case 'thursday':
+        console.log('Complete practical files');
+        break;
+    case 'friday':
+        console.log('Get files checked');
+        break;
+    case 'saturday':
+    case 'Sunday':
+        console.log('Have fun');
+        break;
+    default:
+        console.log('Not a valid day');
+}
+
+if(day === 'monday'){
+    console.log('Plan my course');
+    console.log('Go to college');
+} else if ( day === 'tuesday'){
+    console.log('Prepare for test');
+} else if ( day === 'wednesday' || day === 'thursday'){
+    console.log('Complete practical files');
+} else if ( day === 'friday'){
+    console.log('Get files checked');
+} else if ( day === 'saturday' || day === 'sunday'){
+    console.log('Have fun');
+} else {
+    console.log('Not a valid day');
+}
+*/
+
+// Statements and Expressions:
+// Expression : a piece of code that produces a value.
+/*
+3+4;
+1991;
+true && false && !false;
+const me = 'Manish'; // here it is an eperession.
+console.log(`I am ${2038-1923} years old ${me}.`);
+// we can't use statements in an literal template.
+
+// Statement : a piece of code that is executed but doesn't produce a value.
+if( 23 > 10){
+    const str = '23 is bigger'; // this whole line is a statement
+                // ^this string here is an experssion. 
+}
+*/
+
+
+// Ternary operator:
+// "?"- refers to the if block
+// ":" - refers to else block
+// <condition> ?< if block > : < else block >
+ const age = 23;
+// age >= 18 ? console.log('I would like to drink wine.'):console.log('I would like to drink water')
+
+const drink = age>=18 ? 'wine' : 'water' ; // tihs is an expression.
+console.log(drink);
+
+let drink2;
+if(age >= 18){
+    drink2 = 'wine';
+} else{
+    drink2= 'water';
+}
+
+console.log(drink2);
+console.log(`I like to drink ${drink}`);
