@@ -351,6 +351,7 @@ if( 23 > 10){
 // "?"- refers to the if block
 // ":" - refers to else block
 // <condition> ?< if block > : < else block >
+/*
  const age = 23;
 // age >= 18 ? console.log('I would like to drink wine.'):console.log('I would like to drink water')
 
@@ -366,3 +367,4 @@ if(age >= 18){
 
 console.log(drink2);
 console.log(`I like to drink ${drink}`);
+*/
