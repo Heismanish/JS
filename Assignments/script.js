@@ -1,4 +1,5 @@
 // Value and variable:
+/*
 const country = 'India';
 const continent = 'Asia';
 let population = 1350;
@@ -93,3 +94,44 @@ switch(language){
 // The Conditional (Ternary) Operator
 // population > 33 ?console.log(`${country}'s population is above average.`) : console.log(`${country}'s population is above average.`);
 console.log(`${country}'s population is ${population > 33 ?'above' : 'below'} average`)
+*/
+
+// Functions
+// 1.
+/*
+function describeCountry(country, population, capitalCity) {
+	console.log(
+		`${country} has ${population} million people and it's capital city is ${capitalCity}`
+	);
+}
+
+const india = describeCountry("India", 8, "Delhi");
+const japan = describeCountry("Japan", 1, "Tokyo");
+const australia = describeCountry("Australia", 9, "Sydney");
+*/
+
+// Function declaration vs Expression
+/*
+const percentageOfWorld1 = function (population) {
+	return (population * 100) / 7900;
+};
+
+const india = percentageOfWorld1(1500);
+const japan = percentageOfWorld1(120);
+const australia = percentageOfWorld1(100);
+
+console.log(india, japan, australia);
+
+const percentageOfWorld2 = (population) => {
+	return (population * 100) / 7900;
+};
+
+const india2 = percentageOfWorld2(1500);
+const japan2 = percentageOfWorld2(120);
+const australia2 = percentageOfWorld2(100);
+
+console.log(india, japan, australia);
+*/
+
+// Arrow functions
+// 1.
