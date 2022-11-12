@@ -1,5 +1,5 @@
-'use strict'; //1. shows visible errors in certain situations
-              //2. Restricts us from doing few things.
+"use strict"; //1. shows visible errors in certain situations
+//2. Restricts us from doing few things.
 
 // let hasDriversLicense = false;
 // const passTest = true;
@@ -9,9 +9,7 @@
 //const interface = 'Audio';
 //const private = 534;
 
-
-////////////////////////////////////////////////////////////////////// 
-
+//////////////////////////////////////////////////////////////////////
 
 // Functions: Function is a value in JS and not a data type.
 /*
@@ -343,7 +341,7 @@ for(let i = 0; i<Man.length; i++){
 }
 */
 
-// Looping backwwards and loops in loop:
+// Looping backwards and loops in loop:
 /*
 const Man = [
     'Manish',
@@ -370,21 +368,17 @@ for(let exercise = 0; exercise<4; exercise++ ){
 // WHILE loop:
 
 let rep = 1;
-while( rep <= 10 ){
-    console.log(`Lifting weight repetition ${rep}`);    
-    rep++;
+while (rep <= 10) {
+	console.log(`Lifting weight repetition ${rep}`);
+	rep++;
 }
 
-let dice = Math.trunc(Math.random()*6)+1;
+let dice = Math.trunc(Math.random() * 6) + 1;
 
-while(dice !== 6){
-    console.log(`You rolled a ${dice}`);
-    dice =Math.trunc(Math.random()*6)+1;
-    if(dice===6){
-        console.log('Loop is about to end');
-    }
+while (dice !== 6) {
+	console.log(`You rolled a ${dice}`);
+	dice = Math.trunc(Math.random() * 6) + 1;
+	if (dice === 6) {
+		console.log("Loop is about to end");
+	}
 }
-
-
-
-
