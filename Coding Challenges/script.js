@@ -325,6 +325,7 @@ HINT: Call calcTip in the loop and use the push method to add values to the tips
 
 GOOD LUCK 😀
 */
+/*
 const calcTip = (bill) => {
 	return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 };
@@ -349,3 +350,50 @@ const calcAverage = function (arr) {
 
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
+*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// DEVELOPER SKILLS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////
+// Coding Challenge #1
+
+/*
+Given an array of forecasted maximum temperatures, the thermometer displays 
+a string with these temperatures.
+
+Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
+
+Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+
+TEST DATA 1: [17, 21, 23]
+TEST DATA 2: [12, 5, -5, 0, 4]
+*/
+// 1. understanding the problem
+//  - Convert array to string, seperated by ...
+//  - Day = index+1
+
+// 2. Breaking problems into sub problems;
+//  - Convert array to string
+//  - Convert array element to string with ºC
+//  - Strings needs to contain day (index + 1)
+//  - Add ... between elements and start and end of string
+//  - Log string to console
+
+const arr1 = [17, 21, 23];
+const arr2 = [12, 5, -5, 0, 4];
+
+const printForecast = function (arr) {
+	let str = " ";
+	for (let i = 0; i < arr.length; i++) {
+		str += `...${arr[i]}ºC in ${i + 1} days `;
+	}
+	console.log(str);
+};
+
+printForecast(arr1);
+// console.log(printForecast(arr1));
+// console.log(printForecast(arr2));
