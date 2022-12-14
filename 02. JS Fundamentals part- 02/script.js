@@ -155,7 +155,7 @@ const calcAge = function (birthYear){
 }
 const years = [1991, 1992, 1993, 1999, 2002];
 
-// JS will execute the function then palce them in the array.
+// JS will execute the function then place them in the array.
 const age = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length-1])];
 console.log(age);
 */
@@ -164,7 +164,7 @@ console.log(age);
 /*
 // push()
 // Add element to end of array.
-// gives a value that is the length if the array.
+// gives a value that is the length ff the array.
 const people = ['Manish','Harsh','Pritam'];
 const newLength = people.push('Hardeep');
 console.log(newLength);
@@ -232,11 +232,11 @@ console.log(Manish.age);
 console.log(Manish['lastName'])
 
 const nameKey = 'Name';
-console.log(Manish['first'+nameKey]) // resolves name key to Name then adds the string giving firstName which resolves to-> Manish
+console.log(Manish['first'+nameKey]) // resolves nameKey to Name then adds the string giving firstName which resolves to-> Manish
 
 // const interestedIn = prompt('What do you want ot know about Manish? Choose between firstName, lastName, age, job, and friends');
 //console.log(Manish.interestedIn) // doesn't work coz interestedIn isn't a property Manish
-// console.log(Manish[interestedIn]) // interestedIn is resolved to the input which exists in 
+// console.log(Manish[interestedIn]) // interestedIn is resolved to the input and a input is always a string.
 
 if (Manish[interestedIn]){
     console.log(Manish[interestedIn]);
@@ -262,6 +262,8 @@ const Manish = {
     job: 'student',
     friends:['Manish', 'Harsh','Harshit'],
     hasDriversLicence:true,
+    // Arrow functions cannot be used as constructors and will throw an error when called with new . 
+    // They also do not have a prototype property.
     // calcAge: (birthYear) => {
     //     return 2037-birthYear;
     // },
