@@ -96,6 +96,7 @@ console.log(x === window.z); // false
 // 'this' keyword
 // console.log(this); // by default points to window object
 
+/*
 const calcAge = function (birthYear) {
 	console.log(2022 - birthYear);
 	console.log(this); // 'undefined' coz it is not inside an object, that is, it doesn't has a owner
@@ -127,3 +128,65 @@ matilda.calcAge();
 
 const f = jonas.calcAge;
 f(); // here this is undefined as it is called as a regualr function(like in line 103)
+*/
+
+var firstName = "Matilda";
+
+const jonas = {
+	firstName: "Manish",
+	year: 2002,
+	calcAge: function () {
+		//console.log(this);
+		console.log(2022 - this.year);
+
+		// Solution 1:
+		//const self = this; // self or that
+		// const isMillenial = function () {
+		// 	console.log(self);
+		// 	console.log(self.year >= 1981 && self.year <= 1896);
+		// 	//console.log(this.year >= 1981 && this.year <= 1896);
+		// };
+
+		// Solution 2: Use an arrow funciton instead,
+		// as it doesn't have it's own 'this' hence uses it's parents 'this'
+		// ,that is, arrow function inherits 'this' from it's parent's scope.
+		const isMillenial = () => {
+			console.log(this);
+			console.log(this.year >= 1981 && this.year <= 1896);
+			//console.log(this.year >= 1981 && this.year <= 1896);
+		};
+
+		isMillenial(); // being called as a regular function and hence
+		// this keyword will be undefined and hence we use 'self' in order to
+		//  make it work by preserving 'this' or use a arrow function.
+	},
+
+	//greet: () => console.log(`hey ${this.firstName}`), // this points to window and hence it will
+	//fetch firstName defined in window but not the one in
+	//the calling object.
+	greet: function () {
+		console.log(this);
+		console.log(`hey ${this.firstName}`); // this is pointing to the jonas object hence
+		// firstName in the Jonas object will be used.
+	},
+};
+
+jonas.greet(); // when we try to fetch a variable which is not present in
+// the object it gives undefined
+jonas.calcAge();
+// NOTE: As a part of best, practice do not use arrow function in objects.
+
+// Arguments Keyword
+const addExp = function (a, b) {
+	console.log(arguments);
+	return a + b;
+};
+addExp(2, 5);
+addExp(2, 3, 4, 5, 6, 6); // is legal, can be used by looping the function over and over
+
+// Arrow function doesn't have arguments keyword.
+var addArrow = (a, b) => {
+	console.log(arguments);
+	return a + b;
+};
+addArrow(7, 4);
